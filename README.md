@@ -66,3 +66,10 @@ Todavía no se ha definido un objetivo específico, pero algunas ideas incluyen:
 ## Documento Original
 El documento original del README se encuentra disponible en el siguiente enlace:
 [Google Docs](https://docs.google.com/document/d/1ocWNt2jsjXCbEbQaHWimSCtk3GeR59I2_Rm1JIsG5bA/edit?usp=sharing)
+
+## Cómo descargar la base de datos
+- Descargar la base de datos de [Kaggle Dataset](https://www.kaggle.com/datasets/panaaaaa/english-premier-league-and-championship-full-dataset)
+- Colocar el CSV donde lo puedas accesar
+- Conectarse a postgres en la terminal con su clave
+- 'CREATE DATABASE *nombre*'
+
