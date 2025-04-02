@@ -87,7 +87,7 @@ El documento original del README se encuentra disponible en el siguiente enlace:
    '\c nombre'
 4. Elimina cualquier tabla existente llamada partido (si existe) y crea una nueva tabla con la siguiente estructura:
    ```sql
-   	DROP TABLE IF EXISTS partido;
+   DROP TABLE IF EXISTS partido;
 	SET DateStyle TO 'European';
 	CREATE TABLE partido (
   	"date" TIMESTAMP NOT NULL,
@@ -118,6 +118,6 @@ El documento original del README se encuentra disponible en el siguiente enlace:
 	);
 5. Una vez creada la tabla, importa los datos del archivo CSV en la tabla partido con el siguiente comando:
    ```sql
-   	\copy partido("date", season, home_team, away_team, full_time_home_goals, full_time_away_goals, full_time_result, half_time_home_goals, half_time_away_goals, half_time_result, referee, 	home_shots, away_shots, home_shots_on_target, away_shots_on_target, home_fouls, away_fouls, home_corners, away_corners, home_yellow, away_yellow, home_red, away_red, display_order, 		league) 
+   \copy partido("date", season, home_team, away_team, full_time_home_goals, full_time_away_goals, full_time_result, half_time_home_goals, half_time_away_goals, half_time_result, referee, 	home_shots, away_shots, home_shots_on_target, away_shots_on_target, home_fouls, away_fouls, home_corners, away_corners, home_yellow, away_yellow, home_red, away_red, display_order, 		league) 
 	FROM '/Users/lucasgarcia/Desktop/BasesDeDatos/proyecto/EnglandCSV.csv' 
 	WITH (FORMAT CSV, HEADER true, DELIMITER ',');
