@@ -71,5 +71,36 @@ El documento original del README se encuentra disponible en el siguiente enlace:
 - Descargar la base de datos de [Kaggle Dataset](https://www.kaggle.com/datasets/panaaaaa/english-premier-league-and-championship-full-dataset)
 - Colocar el CSV donde lo puedas accesar
 - Conectarse a postgres en la terminal con su clave
-- 'CREATE DATABASE *nombre*'
+  1. 'CREATE DATABASE *nombre*;'
+  2. '\c nombre'
+  3. 'DROP TABLE IF EXISTS partido;
+      SET DateStyle TO 'European';
+      CREATE TABLE partido (
+	    "date" TIMESTAMP NOT NULL,
+	    season VARCHAR(30) NOT NULL,
+	    home_team VARCHAR(30) NOT NULL,
+	    away_team VARCHAR(30) NOT NULL,
+	    full_time_home_goals SMALLINT NOT NULL,
+	    full_time_away_goals SMALLINT NOT NULL,
+	    full_time_result VARCHAR(10) NOT NULL,
+	    half_time_home_goals SMALLINT,
+	    half_time_away_goals SMALLINT,
+	    half_time_result VARCHAR(10),
+	    referee VARCHAR(50),
+	    home_shots SMALLINT,
+	    away_shots SMALLINT,
+	    home_shots_on_target SMALLINT,
+	    away_shots_on_target SMALLINT,
+	    home_fouls SMALLINT,
+	    away_fouls SMALLINT,
+	    home_corners SMALLINT,
+	    away_corners SMALLINT,
+	    home_yellow SMALLINT,
+	    away_yellow SMALLINT,
+	    home_red SMALLINT,
+	    away_red SMALLINT,
+	    display_order BIGINT NOT NULL,
+	    league VARCHAR(30) NOT NULL
+      );'
+  4. \copy partido("date", season, home_team, away_team, full_time_home_goals, full_time_away_goals, full_time_result, half_time_home_goals, half_time_away_goals, half_time_result, referee,           home_shots, away_shots, home_shots_on_target, away_shots_on_target, home_fouls, away_fouls, home_corners, away_corners, home_yellow, away_yellow, home_red, away_red, display_order,              league) FROM /Users/lucasgarcia/Desktop/BasesDeDatos/proyecto/EnglandCSV.csv WITH (FORMAT CSV, HEADER true, DELIMITER ',');
 
