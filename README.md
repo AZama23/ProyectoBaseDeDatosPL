@@ -126,7 +126,8 @@ El documento original del README se encuentra disponible en el siguiente enlace:
 En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar comillas simples a la ruta
 
 ## Limpieza de Datos
-Hicimos una limpieza inicial a los datos, la query de SQL de esta limpieza se encuentra en el repositorio bajo el nombre "limpieza.sql"
-**Objetivo:** Permitir que los datos sean legibles y manipulables dentro de la base sin perdidas de información.
-**Cambios Realizados:** Para esta limpieza inicial se identificaron casos de equipos y arbitros cuyo nombre causaba problemas, editamos los datos de forma de que la información quede estandarizada.
-**Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
+
+- **Descripción:** Hicimos una limpieza inicial a los datos, la query de SQL de esta limpieza se encuentra en el repositorio bajo el nombre "limpieza.sql"
+- **Objetivo:** Permitir que los datos sean legibles y manipulables dentro de la base sin perdidas de información.
+- **Cambios Realizados:** Para esta limpieza inicial se identificaron casos de equipos y arbitros cuyo nombre causaba problemas, editamos los datos de forma de que la información quede estandarizada.
+- **Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
