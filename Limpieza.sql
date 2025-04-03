@@ -27,6 +27,8 @@ update partido set home_team = 'Brighton' where home_team = 'Brighton & Hove Alb
 update partido set away_team = 'Brighton' where home_team = 'Brighton & Hove Albion';
 
 -- árbitros
+DELETE FROM partido
+WHERE "date" < '2002-08-15';
 update partido set referee = 'martin dean' where referee = 'm dean';
 update partido set referee = 'martin atkinson' where referee = 'm atkinson';
 update partido set referee = 'andre marriner' where referee = 'a marriner';
