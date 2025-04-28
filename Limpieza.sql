@@ -20,11 +20,11 @@ update partido set away_team = 'Manchester City' where away_team in ('Man City',
 
 -- ipswich
 update partido set home_team = 'Ipswich' where home_team = 'Ipswich Town';
-update partido set away_team = 'Ipswich' where home_team = 'Ipswich Town';
+update partido set away_team = 'Ipswich' where away_team = 'Ipswich Town';
 
 -- brighton
 update partido set home_team = 'Brighton' where home_team = 'Brighton & Hove Albion';
-update partido set away_team = 'Brighton' where home_team = 'Brighton & Hove Albion';
+update partido set away_team = 'Brighton' where away_team = 'Brighton & Hove Albion';
 
 -- árbitros
 DELETE FROM partido
