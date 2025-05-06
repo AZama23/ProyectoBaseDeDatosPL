@@ -98,3 +98,10 @@ SET liga_id = (
 	WHERE liga.nombre=partido.league
 );
 ALTER TABLE partido ALTER COLUMN liga_id SET NOT NULL;
+
+/* borrar columnas de partido */
+ALTER TABLE partido DROP COLUMN home_team;
+ALTER TABLE partido DROP COLUMN away_team;
+ALTER TABLE partido DROP COLUMN season;
+ALTER TABLE partido DROP COLUMN league;
+ALTER TABLE partido DROP COLUMN referee;
