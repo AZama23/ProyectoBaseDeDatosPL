@@ -148,12 +148,12 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Consulta SQL:** La consulta se encuentra en el documento Caso 1.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
 - **Resultados:**![PHOTO-2025-05-12-09-25-24](https://github.com/user-attachments/assets/d8562ce9-ce0f-4512-bf51-3354b94ac5da) ![PHOTO-2025-05-12-09-25-10](https://github.com/user-attachments/assets/61a562b1-0e50-4c6b-80d3-4280636fd5cb) ![PHOTO-2025-05-12-09-24-50](https://github.com/user-attachments/assets/b632b8bc-0fdc-49af-b24c-d463520e6f1f)
 - **Analisis:** En total, hubo **7 campeones distintos** durante las temporadas analizadas:
-- **Manchester United** (13 títulos)
-- **Manchester City** (8)
-- **Chelsea** (5)
-- **Arsenal** (3)
-- **Liverpool** (2)
-- **Leicester City** y **Blackburn Rovers** (1 cada uno)
+  	**Manchester United** (13 títulos)
+  	**Manchester City** (8)
+  	**Chelsea** (5)
+  	**Arsenal** (3)
+  	**Liverpool** (2)
+  	**Leicester City** y **Blackburn Rovers** (1 cada uno)
 Según los datos acumulados:
 - **Por puntos**, los siete equipos con mejor rendimiento fueron:  
   *Manchester United (1702), Chelsea (1684), Arsenal (1662), Liverpool (1638), Manchester City (1621), Tottenham (1421) y Everton (1207)*.
