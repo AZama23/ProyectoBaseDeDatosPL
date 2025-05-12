@@ -54,13 +54,13 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
 ## Objetivo del Proyecto
 Se definieron 3 objetivos principales:
 
-1. **Expandir la muestra**  
+Caso 1. **Expandir la muestra**  
    Comparar los siete equipos de Premier League (primera división) con mayor cantidad de puntos acumulados y diferencia de goles acumulada a partir del primer dato que se tiene registrado en nuestra base (ya limpia y normalizada) con los equipos que ganaron la liga en ese lapso (Liverpool, Man City, Man Utd, Chelsea, Arsenal y Leicester).
 
-2. **El árbitro también juega**  
+Caso 2. **El árbitro también juega**  
    Observar patrones entre los árbitros con mayor y menor número de tarjetas y ver qué resultados se obtienen.
 
-3. **Ciudad vs Campo**  
+Caso 3. **Ciudad vs Campo**  
    Ver la diferencia de puntos obtenidos por los equipos de Londres, Manchester y Liverpool, vs aquellos de ciudades más pequeñas.
 
 
@@ -138,3 +138,9 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Objetivo:** Permitir que los datos sean legibles y manipulables dentro de la base sin perdidas de información.
 - **Cambios Realizados:** Para esta limpieza inicial se identificaron casos de equipos y arbitros cuyo nombre causaba problemas, editamos los datos de forma de que la información quede estandarizada.
 - **Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
+
+## Normalizacion
+
+## Análisis de datos: Caso 1
+
+- 
