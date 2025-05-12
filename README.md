@@ -239,7 +239,8 @@ ERD:
 - **Descripción:** Se calcularon los **siete equipos con más puntos acumulados** y **mejor diferencia de goles** a lo largo de 23 temporadas de la Premier League, utilizando los datos disponibles desde el primer partido registrado en nuestra base de datos.
 - **Objetivo:** El objetivo fue identificar si estos equipos, medidos por rendimiento sostenido, coinciden con los **equipos que realmente ganaron la liga** en ese periodo.  La comparación se realizó con los campeones oficiales: **Liverpool, Manchester City, Manchester United, Chelsea, Arsenal y Leicester City**, contrastando el rendimiento estadístico con los resultados históricos.
 - **Consulta SQL:** La consulta se encuentra en el documento Caso 1.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
-- **Resultados:**![PHOTO-2025-05-12-09-25-24](https://github.com/user-attachments/assets/d8562ce9-ce0f-4512-bf51-3354b94ac5da) ![PHOTO-2025-05-12-09-25-10](https://github.com/user-attachments/assets/61a562b1-0e50-4c6b-80d3-4280636fd5cb) ![PHOTO-2025-05-12-09-24-50](https://github.com/user-attachments/assets/b632b8bc-0fdc-49af-b24c-d463520e6f1f)
+- **Resultados:** ![output (1)](https://github.com/user-attachments/assets/b7e1b808-487d-49b3-ba82-668474a4488d)
+
 - **Por títulos**, los siete equipos que líderan son:
   *Manchester United (13 títulos), Manchester City (8), Chelsea (5), Arsenal (3), Liverpool (2) y Leicester City/Blackburn Rovers (1)*.
 - **Por puntos**, los siete equipos con mejor rendimiento fueron:  
