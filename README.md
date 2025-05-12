@@ -143,4 +143,14 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 
 ## Análisis de datos: Caso 1
 
-- 
+## Análisis de datos: Caso 3
+
+- **Descripción:** Creamos tablas dónde se obtiene el **promedio de puntos por partido de local y de visitante**, además de la diferencia de estas. Separamos estos datos entre 2 bloques, equipos de ciudades grandes de Inglaterra (Londres, Manchester y Liverpool) y el resto de equipos **actualmente en la primera división iglesa**.
+- **Objetivo:** Analizar si hay alguna diferencia entre ser Local en una gran ciudad y no serlo, para ver si se puede **explicar porqué 11 de 20 equipos de la competición se dividen en solo 3 ciudades**.
+- **Consulta SQL:** La primer consulta se encuentra en el documento **Caso3Ciudad.sql** en este repositorio, este incluye la consulta de los 11 equipos en grandes ciudades de londres. La segunda consulta se encuentra en el documento **Caso3NoCiudad.sql** en este repositorio, este incluye la consulta del resto de equipos.
+- **Resultados:** ![tabla_ciudad_colores](https://github.com/user-attachments/assets/055187ac-b7c8-40fc-a874-93c7fd566a21) ![grafica_zama_nociudad_colores_completa](https://github.com/user-attachments/assets/f5856c33-eb44-4fbe-b343-2ddcd4f261b5) ![tabla_estadios_premier_2024_25_colores_completa](https://github.com/user-attachments/assets/02664c45-3cf1-42b9-99cc-105b360a9558)
+
+
+
+
+
