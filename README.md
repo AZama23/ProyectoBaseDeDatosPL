@@ -80,7 +80,7 @@ El documento original del README se encuentra disponible en el siguiente enlace:
 1. Descargar la base de datos desde el siguiente enlace de Kaggle:  
    [Kaggle Dataset: English Premier League and Championship Full Dataset](https://www.kaggle.com/datasets/panaaaaa/english-premier-league-and-championship-full-dataset)
 
-2. Colocar el archivo CSV en un lugar accesible en tu sistema.
+2. Colocar los archivos ENGLAND CSV.CSV y ENGLAND 2 CSV.CSV en un lugar accesible en tu sistema. Cambia sus nombres en tu sistema para que no tengan espacios.
 
 ## Instrucciones para cargar la base de datos en PostgreSQL
 
@@ -127,6 +127,7 @@ El documento original del README se encuentra disponible en el siguiente enlace:
    \copy partido("date", season, home_team, away_team, full_time_home_goals, full_time_away_goals, full_time_result, half_time_home_goals, half_time_away_goals, half_time_result, referee, 	home_shots, away_shots, home_shots_on_target, away_shots_on_target, home_fouls, away_fouls, home_corners, away_corners, home_yellow, away_yellow, home_red, away_red, display_order, 		league) 
 	FROM ruta_al_archivo.csv 
 	WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+6. Repite pasos 4 y 5 pero cambiando 'partido' a 'partido2' y el archivo ENGLAND.CSV a ENGLAND2.CSV
 
 **NOTA:**
 En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar comillas simples a la ruta
