@@ -246,6 +246,14 @@ ERD:
 - **Analisis según los datos acumulados:** Este análisis muestra que, si bien algunos equipos como **Tottenham** y **Everton** se mantienen regularmente competitivos, no lograron coronarse campeones, mientras que equipos como **Blackburn** o **Leicester** fueron campeones en una única ocasión sin figurar entre los de mejor rendimiento acumulado.  
 La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempre se traduce en títulos**, aunque sí refleja consistencia en la élite del fútbol inglés.
 
+## Análisis de datos: Caso 2
+
+- **Descripción:** Se calcularon **ratings ofensivos y defensivos** por equipo utilizando datos cómo tiros, tiros a puerta y corners.
+- **Objetivo:** El objetivo fue ver si aquellos equipos que esperarías sean quienes mejor juegan son los que mejor atacan y los que mejor defienden, es decir, si **los datos respaldan lo que el ojo ve.**
+- **Consulta SQL:** La consulta se encuentra en el documento "analisis casos 2 y 4", en este se define un indice dónde se le asigna diferentes pesos a diferentes acciones y se calcula un valor de que tan bien defiende y ataca un equipo.
+- **Resultados:** ![download](https://github.com/user-attachments/assets/57d8d1b6-d79d-452c-baf3-38f628fef1a4)
+- **Analisis:** Aunque en general, los equipos están bastante parejos, encontrandose la gran mayoría en la misma área de la gráfica, si destacan algunos de los equipos que en el caso anterior vimos que se destacaban, por lo tanto, podemos determinar que efectivamente **aquellos equipos que en percepción mejor juegan, se observan igualmente con datos entre los mejores**.
+
 ## Análisis de datos: Caso 3
 
 - **Descripción:** Creamos tablas dónde se obtiene el **promedio de puntos por partido de local y de visitante**, además de la diferencia de estas. Separamos estos datos entre 2 bloques, equipos de ciudades grandes de Inglaterra (Londres, Manchester y Liverpool) y el resto de equipos **actualmente en la primera división iglesa**.
