@@ -69,10 +69,6 @@ Caso 3. **Ciudad vs Campo**
 3. **Respeto a los jugadores:** Aunque no se incluyan datos personales, debemos manejar la información con responsabilidad.
 4. **Transparencia:** No modificar ni omitir información para vender una narrativa específica.
 
-## Documento Original
-El documento original del README se encuentra disponible en el siguiente enlace:
-[Google Docs](https://docs.google.com/document/d/1ocWNt2jsjXCbEbQaHWimSCtk3GeR59I2_Rm1JIsG5bA/edit?usp=sharing)
-
 # Guía para Descargar y Cargar la Base de Datos
 
 ## Cómo descargar la base de datos
