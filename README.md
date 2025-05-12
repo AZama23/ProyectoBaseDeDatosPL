@@ -230,8 +230,6 @@ Estadísticas por equipo por partido (una fila por equipo por partido).
 
 Puedes incluir aquí tu imagen del diagrama ER (reemplaza la ruta con la real):
 
-```markdown
-![Diagrama ER](ruta/a/tu/diagrama-er.png)
 
 
 ## Análisis de datos: Caso 1
