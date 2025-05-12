@@ -139,6 +139,100 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
 
 ## Normalizacion
+### ⚽ Base de Datos de Partidos de Fútbol – Esquema Normalizado
+
+Este proyecto contiene una base de datos de partidos de fútbol (Premier League y Championship), originalmente en una sola tabla. Se ha **normalizado hasta la Cuarta Forma Normal (4NF)** para eliminar redundancias, mejorar la integridad referencial y facilitar análisis avanzados.
+
+---
+
+#### ✅ Objetivo de la Normalización
+
+- Evitar la repetición de datos (por ejemplo, nombres de árbitros o equipos).
+- Facilitar la escalabilidad al agregar más ligas, temporadas o estadísticas.
+- Mejorar el rendimiento y la claridad en las consultas SQL.
+- Establecer relaciones claras entre entidades como partidos, equipos, árbitros y estadísticas.
+
+---
+
+#### 🧱 Tablas del Modelo Normalizado
+
+##### 1. `match`
+
+Información general del partido.
+
+| Columna       | Tipo        | Descripción                           |
+|---------------|-------------|---------------------------------------|
+| `match_id`    | `SERIAL PK` | Identificador único del partido       |
+| `date`        | `TIMESTAMP` | Fecha del partido                     |
+| `season`      | `VARCHAR`   | Temporada (ej. "2024/25")             |
+| `league_id`   | `INT FK`    | Relación con la liga (`league`)       |
+| `referee_id`  | `INT FK`    | Relación con el árbitro (`referee`)   |
+
+---
+
+##### 2. `team`
+
+Lista única de equipos.
+
+| Columna       | Tipo        | Descripción             |
+|---------------|-------------|-------------------------|
+| `team_id`     | `SERIAL PK` | Identificador del equipo|
+| `team_name`   | `VARCHAR`   | Nombre del equipo       |
+
+---
+
+##### 3. `league`
+
+Catálogo de ligas.
+
+| Columna       | Tipo        | Descripción            |
+|---------------|-------------|------------------------|
+| `league_id`   | `SERIAL PK` | Identificador de liga  |
+| `league_name` | `VARCHAR`   | Nombre (ej. "Premier") |
+
+---
+
+##### 4. `referee`
+
+Lista única de árbitros normalizados.
+
+| Columna        | Tipo        | Descripción            |
+|----------------|-------------|------------------------|
+| `referee_id`   | `SERIAL PK` | Identificador árbitro  |
+| `referee_name` | `VARCHAR`   | Nombre limpio y único  |
+
+---
+
+##### 5. `match_stats`
+
+Estadísticas por equipo por partido (una fila por equipo por partido).
+
+| Columna               | Tipo        | Descripción                          |
+|-----------------------|-------------|--------------------------------------|
+| `match_stats_id`      | `SERIAL PK` | ID estadístico                       |
+| `match_id`            | `INT FK`    | Relación con `match`                 |
+| `team_id`             | `INT FK`    | Relación con `team`                  |
+| `is_home_team`        | `BOOLEAN`   | Si el equipo fue local               |
+| `goals`               | `SMALLINT`  | Goles anotados                       |
+| `goals_conceded`      | `SMALLINT`  | Goles recibidos                      |
+| `shots`               | `SMALLINT`  | Tiros totales                        |
+| `shots_on_target`     | `SMALLINT`  | Tiros al arco                        |
+| `corners`             | `SMALLINT`  | Tiros de esquina                     |
+| `fouls`               | `SMALLINT`  | Faltas cometidas                     |
+| `yellow_cards`        | `SMALLINT`  | Tarjetas amarillas                   |
+| `red_cards`           | `SMALLINT`  | Tarjetas rojas                       |
+
+> 🔄 Cada partido tiene **2 registros** en `match_stats`: uno para el equipo local (`is_home_team = TRUE`) y otro para el visitante (`FALSE`).
+
+---
+
+#### 🖼️ Diagrama ER
+
+Puedes incluir aquí tu imagen del diagrama ER (reemplaza la ruta con la real):
+
+```markdown
+![Diagrama ER](ruta/a/tu/diagrama-er.png)
+
 
 ## Análisis de datos: Caso 1
 
