@@ -52,10 +52,14 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
 - **Temporales:** `Date`, `Display_Order` 
 
 ## Objetivo del Proyecto
-Todavía no se ha definido un objetivo específico, pero algunas ideas incluyen:
-- Explicar conductas seguidas por equipos que posteriormente fueron exitosos.
-- Analizar la influencia de factores como el árbitro o el recorrido hasta el partido.
-- Comparar casos específicos contra el promedio histórico para identificar tendencias.
+Se definieron 3 objetivos principales:
+1.- **Expandir la muestra**
+Comparar los siete equipos de Premier League (primera división) con mayor cantidad de puntos acumulados y diferencia de goles acumulada a partir del primer dato que se tiene registrado en nuestra base (ya limpia y normalizada) con los equipos que ganaron la liga en ese lapso (Liverpool, Man City, Man Utd, Chelsea, Arsenal y Leicester).
+2.- **El arbitro también juega**
+Observar patrones entre los arbitros con mayor y menor numero de tarjetas y ver que resultados se obtienen.
+3.- **Ciudad vs Campo**
+Ver la diferencia de puntos obtenidos por los equipos de londres, mancherster y liverpool, vs aquellos de ciudades más pequeñas.
+
 
 ## Consideraciones Éticas
 1. **Evitar malinterpretaciones:** Se debe tener cuidado con la interpretación de los datos, especialmente en temas como favoritismo arbitral.
