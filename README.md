@@ -139,96 +139,94 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
 
 ## Normalizacion
-### ⚽ Base de Datos de Partidos de Fútbol – Esquema Normalizado
+### ⚽ Base de Datos de Partidos de Fútbol – Esquema Normalizado (5 Tablas)
 
-Este proyecto contiene una base de datos de partidos de fútbol (Premier League y Championship), originalmente en una sola tabla. Se ha **normalizado hasta la Cuarta Forma Normal (4NF)** para eliminar redundancias, mejorar la integridad referencial y facilitar análisis avanzados.
+Este proyecto contiene una base de datos de partidos de fútbol (Premier League y Championship), que ha sido **normalizada hasta la 4NF**, resultando en un modelo de **5 tablas** para mejorar eficiencia, escalabilidad y limpieza de datos.
 
 ---
 
 #### ✅ Objetivo de la Normalización
 
-- Evitar la repetición de datos (por ejemplo, nombres de árbitros o equipos).
-- Facilitar la escalabilidad al agregar más ligas, temporadas o estadísticas.
-- Mejorar el rendimiento y la claridad en las consultas SQL.
-- Establecer relaciones claras entre entidades como partidos, equipos, árbitros y estadísticas.
+- Evitar duplicación de nombres de equipos, árbitros, temporadas y ligas.
+- Facilitar análisis estadístico por equipo, temporada o liga.
+- Preparar la base para integración con modelos predictivos y visualizaciones.
 
 ---
 
-#### 🧱 Tablas del Modelo Normalizado
+#### 🧱 Tablas del Modelo Final
 
-##### 1. `match`
+##### 1. `partido`
 
-Información general del partido.
+Tabla principal con los datos de cada partido, incluyendo estadísticas completas y relaciones con otras entidades.
 
-| Columna       | Tipo        | Descripción                           |
-|---------------|-------------|---------------------------------------|
-| `match_id`    | `SERIAL PK` | Identificador único del partido       |
-| `date`        | `TIMESTAMP` | Fecha del partido                     |
-| `season`      | `VARCHAR`   | Temporada (ej. "2024/25")             |
-| `league_id`   | `INT FK`    | Relación con la liga (`league`)       |
-| `referee_id`  | `INT FK`    | Relación con el árbitro (`referee`)   |
+| Columna              | Tipo        | Descripción                            |
+|----------------------|-------------|----------------------------------------|
+| `id`       	       | `BIGSERIAL PK` | Identificador único del partido        |
+| `fecha`              | `TIMESTAMP` | Fecha del partido                      |
+| `home_team_id`       | `INT FK`    | Relación con equipo local              |
+| `away_team_id`       | `INT FK`    | Relación con equipo visitante          |
+| `liga_id`            | `INT FK`    | Relación con la liga                   |
+| `temporada_id`       | `INT FK`    | Relación con la temporada              |
+| `arbitro_id`         | `INT FK`    | Relación con el árbitro                |
+| `full_time_home_goals`     | `SMALLINT` | Goles local                      |
+| `full_time_away_goals`     | `SMALLINT` | Goles visitante                  |
+| `full_time_result`         | `VARCHAR`  | Resultado final ('H', 'A', 'D')  |
+| `half_time_home_goals`     | `SMALLINT` | Goles al descanso (local)        |
+| `half_time_away_goals`     | `SMALLINT` | Goles al descanso (visitante)    |
+| `half_time_result`         | `VARCHAR`  | Resultado al descanso            |
+| `home_shots`, `away_shots` | `SMALLINT` | Tiros totales por equipo         |
+| `home_shots_on_target`, `away_shots_on_target` | `SMALLINT` | Tiros al arco |
+| `home_fouls`, `away_fouls` | `SMALLINT` | Faltas cometidas                 |
+| `home_corners`, `away_corners` | `SMALLINT` | Tiros de esquina              |
+| `home_yellow`, `away_yellow` | `SMALLINT` | Tarjetas amarillas             |
+| `home_red`, `away_red` | `SMALLINT` | Tarjetas rojas                      |
+| `display_order`      | `BIGINT`    | Orden visual del partido              |
 
----
-
-##### 2. `team`
-
-Lista única de equipos.
-
-| Columna       | Tipo        | Descripción             |
-|---------------|-------------|-------------------------|
-| `team_id`     | `SERIAL PK` | Identificador del equipo|
-| `team_name`   | `VARCHAR`   | Nombre del equipo       |
-
----
-
-##### 3. `league`
-
-Catálogo de ligas.
-
-| Columna       | Tipo        | Descripción            |
-|---------------|-------------|------------------------|
-| `league_id`   | `SERIAL PK` | Identificador de liga  |
-| `league_name` | `VARCHAR`   | Nombre (ej. "Premier") |
+> ⚠️ Esta tabla contiene **una fila por partido** e incluye todas las estadísticas del equipo local y visitante.
 
 ---
 
-##### 4. `referee`
+##### 2. `equipo`
 
-Lista única de árbitros normalizados.
-
-| Columna        | Tipo        | Descripción            |
-|----------------|-------------|------------------------|
-| `referee_id`   | `SERIAL PK` | Identificador árbitro  |
-| `referee_name` | `VARCHAR`   | Nombre limpio y único  |
+| Columna        | Tipo           | Descripción                    |
+|----------------|----------------|--------------------------------|
+| `id`           | `BIGSERIAL PK` | Identificador del equipo       |
+| `nombre_equipo`| `VARCHAR`      | Nombre único del equipo        |
 
 ---
 
-##### 5. `match_stats`
+##### 3. `liga`
 
-Estadísticas por equipo por partido (una fila por equipo por partido).
+| Columna       | Tipo           | Descripción                   |
+|---------------|----------------|-------------------------------|
+| `id`          | `BIGSERIAL PK` | Identificador de la liga      |
+| `nombre_liga` | `VARCHAR`      | Nombre único de la liga       |
 
-| Columna               | Tipo        | Descripción                          |
-|-----------------------|-------------|--------------------------------------|
-| `match_stats_id`      | `SERIAL PK` | ID estadístico                       |
-| `match_id`            | `INT FK`    | Relación con `match`                 |
-| `team_id`             | `INT FK`    | Relación con `team`                  |
-| `is_home_team`        | `BOOLEAN`   | Si el equipo fue local               |
-| `goals`               | `SMALLINT`  | Goles anotados                       |
-| `goals_conceded`      | `SMALLINT`  | Goles recibidos                      |
-| `shots`               | `SMALLINT`  | Tiros totales                        |
-| `shots_on_target`     | `SMALLINT`  | Tiros al arco                        |
-| `corners`             | `SMALLINT`  | Tiros de esquina                     |
-| `fouls`               | `SMALLINT`  | Faltas cometidas                     |
-| `yellow_cards`        | `SMALLINT`  | Tarjetas amarillas                   |
-| `red_cards`           | `SMALLINT`  | Tarjetas rojas                       |
+---
 
-> 🔄 Cada partido tiene **2 registros** en `match_stats`: uno para el equipo local (`is_home_team = TRUE`) y otro para el visitante (`FALSE`).
+##### 4. `temporada`
+
+| Columna         | Tipo           | Descripción                      |
+|-----------------|----------------|----------------------------------|
+| `id`  	  | `BIGSERIAL PK` | Identificador de la temporada    |
+| `nombre_temporada` | `VARCHAR`   | Ej. "2024/25", "2023/24"         |
+
+---
+
+##### 5. `arbitro`
+
+| Columna         | Tipo           | Descripción                    |
+|-----------------|----------------|--------------------------------|
+| `id`    	  | `BIGSERIAL PK` | Identificador del árbitro      |
+| `nombre_arbitro`| `VARCHAR`      | Nombre limpio y único          |
 
 ---
 
 #### 🖼️ Diagrama ER
 
-Puedes incluir aquí tu imagen del diagrama ER (reemplaza la ruta con la real):
+Puedes insertar tu imagen del diagrama ER aquí (ajusta la ruta):
+
+
 
 
 
