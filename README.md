@@ -143,6 +143,10 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 
 ## Análisis de datos: Caso 1
 
+- **Descripción:** Se calcularon los **siete equipos con más puntos acumulados** y **mejor diferencia de goles** a lo largo de 23 temporadas de la Premier League, utilizando los datos disponibles desde el primer partido registrado en nuestra base de datos.
+- **Objetivo:** El objetivo fue identificar si estos equipos, medidos por rendimiento sostenido, coinciden con los **equipos que realmente ganaron la liga** en ese periodo.  La comparación se realizó con los campeones oficiales: **Liverpool, Manchester City, Manchester United, Chelsea, Arsenal y Leicester City**, contrastando el rendimiento estadístico con los resultados históricos.
+- **Consulta SQL:** La consulta se encuentra en el documento Caso 1.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
+
 ## Análisis de datos: Caso 3
 
 - **Descripción:** Creamos tablas dónde se obtiene el **promedio de puntos por partido de local y de visitante**, además de la diferencia de estas. Separamos estos datos entre 2 bloques, equipos de ciudades grandes de Inglaterra (Londres, Manchester y Liverpool) y el resto de equipos **actualmente en la primera división iglesa**.
