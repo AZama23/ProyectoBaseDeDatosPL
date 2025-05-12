@@ -147,18 +147,13 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Objetivo:** El objetivo fue identificar si estos equipos, medidos por rendimiento sostenido, coinciden con los **equipos que realmente ganaron la liga** en ese periodo.  La comparación se realizó con los campeones oficiales: **Liverpool, Manchester City, Manchester United, Chelsea, Arsenal y Leicester City**, contrastando el rendimiento estadístico con los resultados históricos.
 - **Consulta SQL:** La consulta se encuentra en el documento Caso 1.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
 - **Resultados:**![PHOTO-2025-05-12-09-25-24](https://github.com/user-attachments/assets/d8562ce9-ce0f-4512-bf51-3354b94ac5da) ![PHOTO-2025-05-12-09-25-10](https://github.com/user-attachments/assets/61a562b1-0e50-4c6b-80d3-4280636fd5cb) ![PHOTO-2025-05-12-09-24-50](https://github.com/user-attachments/assets/b632b8bc-0fdc-49af-b24c-d463520e6f1f)
-- **Analisis:** En total, hubo **7 campeones distintos** durante las temporadas analizadas:
-  	**Manchester United** (13 títulos)
-  	**Manchester City** (8)
-  	**Chelsea** (5)
-  	**Arsenal** (3)
-  	**Liverpool** (2)
-  	**Leicester City** y **Blackburn Rovers** (1 cada uno)
-Según los datos acumulados:
+- **Analisis:** Según los datos acumulados:
+- **Por títulos**, los siete equipos que líderan son:
+  *Manchester United (13 títulos), Manchester City (8), Chelsea (5), Arsenal (3), Liverpool (2) y Leicester City/Blackburn Rovers (1)*.
 - **Por puntos**, los siete equipos con mejor rendimiento fueron:  
-  *Manchester United (1702), Chelsea (1684), Arsenal (1662), Liverpool (1638), Manchester City (1621), Tottenham (1421) y Everton (1207)*.
+  *Manchester United (1702 puntos), Chelsea (1684), Arsenal (1662), Liverpool (1638), Manchester City (1621), Tottenham (1421) y Everton (1207)*.
 - **Por diferencia de goles**, el ranking fue liderado por:  
-  *Manchester City (788), Chelsea (750), Arsenal (746), Liverpool (740), Manchester United (701), Tottenham (354) y Everton (24)*.
+  *Manchester City (+788), Chelsea (+750), Arsenal (+746), Liverpool (+740), Manchester United (+701), Tottenham (+354) y Everton (+24)*.
 Este análisis muestra que, si bien algunos equipos como **Tottenham** y **Everton** se mantienen regularmente competitivos, no lograron coronarse campeones, mientras que equipos como **Blackburn** o **Leicester** fueron campeones en una única ocasión sin figurar entre los de mejor rendimiento acumulado.  
 La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempre se traduce en títulos**, aunque sí refleja consistencia en la élite del fútbol inglés.
 
