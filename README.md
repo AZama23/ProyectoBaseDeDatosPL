@@ -146,6 +146,21 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Descripción:** Se calcularon los **siete equipos con más puntos acumulados** y **mejor diferencia de goles** a lo largo de 23 temporadas de la Premier League, utilizando los datos disponibles desde el primer partido registrado en nuestra base de datos.
 - **Objetivo:** El objetivo fue identificar si estos equipos, medidos por rendimiento sostenido, coinciden con los **equipos que realmente ganaron la liga** en ese periodo.  La comparación se realizó con los campeones oficiales: **Liverpool, Manchester City, Manchester United, Chelsea, Arsenal y Leicester City**, contrastando el rendimiento estadístico con los resultados históricos.
 - **Consulta SQL:** La consulta se encuentra en el documento Caso 1.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
+- **Resultados:**![PHOTO-2025-05-12-09-25-24](https://github.com/user-attachments/assets/d8562ce9-ce0f-4512-bf51-3354b94ac5da) ![PHOTO-2025-05-12-09-25-10](https://github.com/user-attachments/assets/61a562b1-0e50-4c6b-80d3-4280636fd5cb) ![PHOTO-2025-05-12-09-24-50](https://github.com/user-attachments/assets/b632b8bc-0fdc-49af-b24c-d463520e6f1f)
+- **Analisis:** En total, hubo **7 campeones distintos** durante las temporadas analizadas:
+- **Manchester United** (13 títulos)
+- **Manchester City** (8)
+- **Chelsea** (5)
+- **Arsenal** (3)
+- **Liverpool** (2)
+- **Leicester City** y **Blackburn Rovers** (1 cada uno)
+Según los datos acumulados:
+- **Por puntos**, los siete equipos con mejor rendimiento fueron:  
+  *Manchester United (1702), Chelsea (1684), Arsenal (1662), Liverpool (1638), Manchester City (1621), Tottenham (1421) y Everton (1207)*.
+- **Por diferencia de goles**, el ranking fue liderado por:  
+  *Manchester City (788), Chelsea (750), Arsenal (746), Liverpool (740), Manchester United (701), Tottenham (354) y Everton (24)*.
+Este análisis muestra que, si bien algunos equipos como **Tottenham** y **Everton** se mantienen regularmente competitivos, no lograron coronarse campeones, mientras que equipos como **Blackburn** o **Leicester** fueron campeones en una única ocasión sin figurar entre los de mejor rendimiento acumulado.  
+La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempre se traduce en títulos**, aunque sí refleja consistencia en la élite del fútbol inglés.
 
 ## Análisis de datos: Caso 3
 
@@ -153,7 +168,7 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Objetivo:** Analizar si hay alguna diferencia entre ser Local en una gran ciudad y no serlo, para ver si se puede **explicar porqué 11 de 20 equipos de la competición se dividen en solo 3 ciudades**.
 - **Consulta SQL:** La primer consulta se encuentra en el documento **Caso3Ciudad.sql** en este repositorio, este incluye la consulta de los 11 equipos en grandes ciudades de londres. La segunda consulta se encuentra en el documento **Caso3NoCiudad.sql** en este repositorio, este incluye la consulta del resto de equipos.
 - **Resultados:** ![tabla_ciudad_colores](https://github.com/user-attachments/assets/055187ac-b7c8-40fc-a874-93c7fd566a21) ![tabla_nociudad_colores](https://github.com/user-attachments/assets/4bfc1335-47e6-497d-b374-0fc3e24ade09) ![grafica_zama_combinada_final (1)](https://github.com/user-attachments/assets/b46cd346-da8e-45be-9c3a-84ccfe38ea5c) ![graficas_ciudad_vs_nociudad_horizontal](https://github.com/user-attachments/assets/73cdeab9-ade0-40ac-947a-30ebbc571d48) ![tabla_estadios_premier_2024_25_colores_completa](https://github.com/user-attachments/assets/02664c45-3cf1-42b9-99cc-105b360a9558)
-- **Analisis:** Se observa una **mejor diferencia de puntos y promedio de local en los equipos de ciudad respecto a el resto de la liga**, pero se debe considerar que los llamados "Big Six" se ecnuentran en este grupo, por lo cual es posible que tengan mejores resultados por jugar en una ciudad grande o simplemente porque son mejores, por lo cual se encontró evidencia de que aquellos equipos que juegan en estas ciudades si obtienen mejores resultados en general, más no estamos seguros si la zona en la que juegan es el causante de este resultado.
+- **Analisis:** Se observa una **mejor diferencia de puntos y promedio de local en los equipos de ciudad respecto a el resto de la liga**, pero se debe considerar que los llamados "Big Six" se encuentran en este grupo, por lo cual es posible que tengan mejores resultados por jugar en una ciudad grande o simplemente porque son mejores, por lo cual se encontró evidencia de que aquellos equipos que juegan en estas ciudades si obtienen mejores resultados en general, más no estamos seguros si la zona en la que juegan es el causante de este resultado.
 - - **Casos anomalos:** Algunos resultados que resaltan son el del **Ipswich**, pues es el único con diferencia negativa, consideramos que esto se debe a que solo llevan 1 temporada en premier, por lo que el resultado es algo impreciso. En cuanto al **Newcastle**, aunque no se encuentra en una ciudad, se encuentra muy alejado al norte del país y cuenta con el estadio más grande fuera de los equipos de ciudades grandes, por lo cual hace sentido que sus numeros sean más similares a estos equipos que con los de su grupo. Finalmente, el **Crystal Palace**, está en un caso similar pero invertdo al newcastle, pues al contar con un estadio pequeño y alejado de los centros turisticos de londres, se puede explicar que sus numeros sean más similares a los del resto de equipos que con los equipos de ciudad grande. 
 
 
