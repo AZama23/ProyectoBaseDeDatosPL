@@ -135,6 +135,9 @@ Caso 5. **Impuesto de visita**
 En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar comillas simples a la ruta
 
 ## Análisis preliminar
+- **Exploración inicial:** Hicimos unas consultas para **entender cómo se estructuraba nuestra base**, revisando dónde había datos nulos, incorrectos o mal escritos.
+- **Hallazgos:** Descubrimos qué había ciertos arbitros y equipos cuyo nombre estaba escrito de forma diferente en algunos casos, igualmente descubrimos que los datos estaban incompletos antes del 2002 y hubo un partido que no se jugó, estos descubrimientos se tomaron en cuenta para realizar la limpieza
+- **Comprobación limpieza:**
 
 ## Limpieza de Datos
 
