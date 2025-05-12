@@ -252,7 +252,7 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 - **Objetivo:** El objetivo fue ver si aquellos equipos que esperarías sean quienes mejor juegan son los que mejor atacan y los que mejor defienden, es decir, si **los datos respaldan lo que el ojo ve.**
 - **Consulta SQL:** La consulta se encuentra en el documento "analisis casos 2 y 4", en este se define un indice dónde se le asigna diferentes pesos a diferentes acciones y se calcula un valor de que tan bien defiende y ataca un equipo.
 - **Resultados:** ![download](https://github.com/user-attachments/assets/57d8d1b6-d79d-452c-baf3-38f628fef1a4)
-- **Analisis:** Aunque en general, los equipos están bastante parejos, encontrandose la gran mayoría en la misma área de la gráfica, si destacan algunos de los equipos que en el caso anterior vimos que se destacaban, por lo tanto, podemos determinar que efectivamente **aquellos equipos que en percepción mejor juegan, se observan igualmente con datos entre los mejores**.
+- **Analisis:** Aunque en general, los equipos están bastante parejos, encontrandose la gran mayoría en la misma área de la gráfica, si destacan algunos de los equipos que en el caso anterior vimos que se diferencian del resto, por lo tanto, podemos determinar que efectivamente **aquellos equipos que en percepción mejor juegan, se observan igualmente con datos entre los mejores**.
 
 ## Análisis de datos: Caso 3
 
