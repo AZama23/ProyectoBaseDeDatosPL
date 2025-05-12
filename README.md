@@ -132,6 +132,8 @@ El documento original del README se encuentra disponible en el siguiente enlace:
 **NOTA:**
 En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar comillas simples a la ruta
 
+##Análisis preliminar (Entrega.sql)
+
 ## Limpieza de Datos
 
 - **Descripción:** Hicimos una limpieza inicial a los datos, la query de SQL de esta limpieza se encuentra en el repositorio bajo el nombre "limpieza.sql"
