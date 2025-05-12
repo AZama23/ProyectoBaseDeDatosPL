@@ -47,8 +47,7 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
   - Goles (`FTH Goals`, `FTA Goals`, `HTH Goals`, `HTA Goals`)
   - Tiros (`H Shots`, `A Shots`, `H SOT`, `A SOT`)
   - Faltas y tarjetas (`H Fouls`, `A Fouls`, `H Yellow`, `A Yellow`, `H Red`, `A Red`)
-- **Categóricos:** `Season`, `League`
-- **Texto:** `HomeTeam`, `AwayTeam`, `FT Result`, `HT Result`, `Referee`
+- **Categóricos:** `Season`, `League`, `HomeTeam`, `AwayTeam`, `FT Result`, `HT Result`, `Referee`
 - **Temporales:** `Date`, `Display_Order` 
 
 ## Objetivo del Proyecto
