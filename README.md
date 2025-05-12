@@ -221,9 +221,10 @@ Tabla principal con los datos de cada partido, incluyendo estadísticas completa
 
 ---
 
-#### Diagrama ER
+#### Diagrama ERD
 
-ERD:
+ERD: 
+![Diagrama ER de base de datos (pata de gallo) (1)](https://github.com/user-attachments/assets/7c4b2ea0-47ae-4ca5-ab52-66291b455ddd)
 
 
 
