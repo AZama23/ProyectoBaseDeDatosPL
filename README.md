@@ -54,19 +54,19 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
 Se definieron 5 objetivos principales:
 
 Caso 1. **Expandir la muestra**  
-Comparar los siete equipos de Premier League (primera división) con mayor cantidad de puntos acumulados y diferencia de goles acumulada a partir del primer dato que se tiene registrado en nuestra base (ya limpia y normalizada) con los equipos que ganaron la liga en ese lapso.
+- Comparar los siete equipos de Premier League (primera división) con mayor cantidad de puntos acumulados y diferencia de goles acumulada a partir del primer dato que se tiene registrado en nuestra base (ya limpia y normalizada) con los equipos que ganaron la liga en ese lapso.
 
 Caso 2. **Ratings**
-Considerar si los equipos que mejor atacan y defienden son los que mejores resultados obtienen. Esto con el objetivo de ver si *los datos respaldan lo que el ojo ve*.
+- Considerar si los equipos que mejor atacan y defienden son los que mejores resultados obtienen. Esto con el objetivo de ver si *los datos respaldan lo que el ojo ve*.
 
 Caso 3. **Home Field Advantage** 
-Obtener el promedio de puntos por partido de local y de visitante, para ver si hay alguna diferencia entre ser local en una gran ciudad y no serlo.
+- Obtener el promedio de puntos por partido de local y de visitante, para ver si hay alguna diferencia entre ser local en una gran ciudad y no serlo.
 
 Caso 4. **Expected Win**
-Hacer un análisis para comparar los equipos que "juegan bien" (basado en tiros, tiros a puerta y tiros de esquina) contra los equipos que realmente ganan.
+- Hacer un análisis para comparar los equipos que "juegan bien" (basado en tiros, tiros a puerta y tiros de esquina) contra los equipos que realmente ganan.
 
 Caso 5. **Impuesto de visita**  
-Considerar si los equipos que juegan de visita sufren de un "impuesto de visita", es decir, si son castigados con más tarjetas amarillas que los equipos locales.
+- Considerar si los equipos que juegan de visita sufren de un "impuesto de visita", es decir, si son castigados con más tarjetas amarillas que los equipos locales.
 
 
 ## Consideraciones Éticas
