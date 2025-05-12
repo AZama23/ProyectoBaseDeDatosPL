@@ -138,7 +138,7 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 - **Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
 
 ## Normalizacion
-### ⚽ Base de Datos de Partidos de Fútbol – Esquema Normalizado (5 Tablas)
+### Base de Datos de Partidos de Fútbol – Esquema Normalizado (5 Tablas)
 
 Este proyecto contiene una base de datos de partidos de fútbol (Premier League y Championship), que ha sido **normalizada hasta la 4NF**, resultando en un modelo de **5 tablas** para mejorar eficiencia, escalabilidad y limpieza de datos.
 
@@ -259,7 +259,13 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 - **Analisis:** Se observa una **mejor diferencia de puntos y promedio de local en los equipos de ciudad respecto a el resto de la liga**, pero se debe considerar que los llamados "Big Six" se encuentran en este grupo, por lo cual es posible que tengan mejores resultados por jugar en una ciudad grande o simplemente porque son mejores, por lo cual se encontró evidencia de que aquellos equipos que juegan en estas ciudades si obtienen mejores resultados en general, más no estamos seguros si la zona en la que juegan es el causante de este resultado.
 - **Casos anomalos:** Algunos resultados que resaltan son el del **Ipswich**, pues es el único con diferencia negativa, consideramos que esto se debe a que solo llevan 1 temporada en premier, por lo que el resultado es algo impreciso. En cuanto al **Newcastle**, aunque no se encuentra en una ciudad, se encuentra muy alejado al norte del país y cuenta con el estadio más grande fuera de los equipos de ciudades grandes, por lo cual hace sentido que sus numeros sean más similares a estos equipos que con los de su grupo. Finalmente, el **Crystal Palace**, está en un caso similar pero invertdo al newcastle, pues al contar con un estadio pequeño y alejado de los centros turisticos de londres, se puede explicar que sus numeros sean más similares a los del resto de equipos que con los equipos de ciudad grande. 
 
+## Análisis de datos: Caso 4
 
+- **Descripción:** Se calcula la **diferencia entre las victorias REALES obtenidas y las victorias ESPERADAS** calculadas mediante el uso de datos como tiros, tiros a puerta y corners.
+- **Objetivo:** El objetivo es revelar si hay equipos que **obtenido resultados que superan lo que deberían haber conseguido**.
+- **Consulta SQL:** La consulta se encuentra en el documento "analisis casos 2 y 4", en este se define un indice dónde se le calcula mediante comparación entre local y visitante quien "jugo mejor".
+- **Resultados:** ![download](https://github.com/user-attachments/assets/e18f5c40-8a9d-40ce-808a-4aab16716cf7)
+- **Analisis:** Aqui podemos explicar muchos resultados de casos anteriores, por ejemplo, vemos que el mayor favorecido ha sido el Manchester United, explicando cómo a pesar de no tener tanta ventaja en puntos totales históricos, tiene 5 titulos más que el segundo lugar.
 
 
 
