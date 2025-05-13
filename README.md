@@ -160,7 +160,6 @@ Correr `limpieza.sql` para limpiar lo siguiente que hicimos:
 - **Restricciones de integridad:** Se aplicó `SET NOT NULL` a todas las columnas de la tabla `partido`, dado que ya se había limpiado toda la información incompleta.
 
 ## Normalizacion
-### Base de Datos de Partidos de Fútbol – Esquema Normalizado (5 Tablas)
 
 Este proyecto contiene una base de datos de partidos de fútbol (Premier League y Championship), que ha sido **normalizada hasta la 4NF**, resultando en un modelo de **5 tablas** para mejorar eficiencia, escalabilidad y limpieza de datos.
 
@@ -173,7 +172,21 @@ Este proyecto contiene una base de datos de partidos de fútbol (Premier League 
 - Preparar la base para integración con modelos predictivos y visualizaciones.
 
 ---
+#### Dependencias Funcionales
 
+- **equipo**: `id → nombre`
+- **arbitro**: `id → nombre`
+- **liga**: `id → nombre`
+- **temporada**: `id → temp`
+- **partido**:
+  - `id → home_team_id, away_team_id, arbitro_id, temporada_id, liga_id, estadísticas`
+  - (Regla de unicidad): `(home_team_id, away_team_id, temporada_id, liga_id, date) → id`
+
+#### Dependencias Multivaluadas
+
+- No existen dependencias multivaluadas en el modelo actual.
+
+---
 #### Tablas del Modelo Final
 
 ##### 1. `partido`
@@ -212,7 +225,7 @@ Tabla principal con los datos de cada partido, incluyendo estadísticas completa
 | Columna        | Tipo           | Descripción                    |
 |----------------|----------------|--------------------------------|
 | `id`           | `BIGSERIAL PK` | Identificador del equipo       |
-| `nombre_equipo`| `VARCHAR`      | Nombre único del equipo        |
+| `nombre`| `VARCHAR`      | Nombre único del equipo        |
 
 ---
 
@@ -221,7 +234,7 @@ Tabla principal con los datos de cada partido, incluyendo estadísticas completa
 | Columna       | Tipo           | Descripción                   |
 |---------------|----------------|-------------------------------|
 | `id`          | `BIGSERIAL PK` | Identificador de la liga      |
-| `nombre_liga` | `VARCHAR`      | Nombre único de la liga       |
+| `nombre` | `VARCHAR`      | Nombre único de la liga       |
 
 ---
 
@@ -230,7 +243,7 @@ Tabla principal con los datos de cada partido, incluyendo estadísticas completa
 | Columna         | Tipo           | Descripción                      |
 |-----------------|----------------|----------------------------------|
 | `id`  	  | `BIGSERIAL PK` | Identificador de la temporada    |
-| `nombre_temporada` | `VARCHAR`   | Ej. "2024/25", "2023/24"         |
+| `temp` | `VARCHAR`   | Ej. "2024/25", "2023/24"         |
 
 ---
 
@@ -239,7 +252,7 @@ Tabla principal con los datos de cada partido, incluyendo estadísticas completa
 | Columna         | Tipo           | Descripción                    |
 |-----------------|----------------|--------------------------------|
 | `id`    	  | `BIGSERIAL PK` | Identificador del árbitro      |
-| `nombre_arbitro`| `VARCHAR`      | Nombre limpio y único          |
+| `nombre`| `VARCHAR`      | Nombre limpio y único          |
 
 ---
 
