@@ -93,7 +93,7 @@ Caso 5. **Impuesto de visita**
    CREATE DATABASE *nombre*;
 3. Conectarse a la base de datos recién creada:
    '\c nombre'
-4. Elimina cualquier tabla existente llamada partido (si existe) y crea una nueva tabla con la siguiente estructura o \i DescargarProyecto.sql en la terminal:
+4. Elimina cualquier tabla existente llamada partido (si existe) y crea una nueva tabla con la siguiente estructura o `\i DescargarProyecto.sql` en la terminal:
    ```sql
    DROP TABLE IF EXISTS partido;
 	SET DateStyle TO 'European';
@@ -148,7 +148,7 @@ Realizamos diversas consultas para entender cómo se estructuraba nuestra base d
 
 
 ## Limpieza de Datos
-Correr "limpieza.sql" para limpiar lo siguiente que hicimos:
+Correr `limpieza.sql` para limpiar lo siguiente que hicimos:
 
 - **Unificación de tablas:** Se unieron las tablas `partido` y `partido2` en una sola tabla consolidada para aplicar limpieza de forma uniforme.
 - **Unificación de nombres de equipos:** Se estandarizaron nombres distintos que representaban al mismo equipo, por ejemplo, "Manchester United" → "Man United".
