@@ -1,5 +1,6 @@
 INSERT INTO partido
 SELECT * FROM partido2;
+DROP TABLE partido2;
 
 -- ipswich
 update partido set home_team = 'Ipswich' where home_team = 'Ipswich Town';
