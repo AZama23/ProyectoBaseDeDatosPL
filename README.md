@@ -22,7 +22,7 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
 
 
 ## Estructura de los Datos
-- **Número de registros:** 12,154 partidos.
+- **Número de registros:** 23504 partidos.
 - **Número de atributos:** 25 columnas.
 - **Principales atributos:**
   - `Date`: Fecha en la que se jugó el partido.
@@ -93,7 +93,7 @@ Caso 5. **Impuesto de visita**
    CREATE DATABASE *nombre*;
 3. Conectarse a la base de datos recién creada:
    '\c nombre'
-4. Elimina cualquier tabla existente llamada partido (si existe) y crea una nueva tabla con la siguiente estructura:
+4. Elimina cualquier tabla existente llamada partido (si existe) y crea una nueva tabla con la siguiente estructura o \i DescargarProyecto.sql en la terminal:
    ```sql
    DROP TABLE IF EXISTS partido;
 	SET DateStyle TO 'European';
@@ -132,16 +132,32 @@ Caso 5. **Impuesto de visita**
 **NOTA:**
 En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar comillas simples a la ruta
 
-## Análisis preliminar
-- **Exploración inicial:** Hicimos unas consultas para **entender cómo se estructuraba nuestra base**, revisando dónde había datos nulos, incorrectos o mal escritos. Estas consultas se encuentran en el archivo "Analisis Preliminar"
-- **Hallazgos:** Descubrimos qué había ciertos arbitros y equipos cuyo nombre estaba escrito de forma diferente en algunos casos, igualmente descubrimos que los datos estaban incompletos antes del 2002 y hubo un partido que no se jugó, estos descubrimientos se tomaron en cuenta para realizar la limpieza
+## Análisis Preliminar
+
+### Exploración inicial
+
+Realizamos diversas consultas para entender cómo se estructuraba nuestra base de datos, identificando valores nulos, formatos inconsistentes y registros erróneos. Estas consultas están documentadas en el archivo `AnalisisPreliminar.sql`.
+
+### Hallazgos
+
+- **Nombres inconsistentes de equipos:** Algunos equipos aparecen registrados con nombres distintos en distintas temporadas (por ejemplo, "Ipswich" y "Ipswich Town").
+- **Formato de nombres de árbitros:** Los árbitros antes de la temporada 2002/03 están escritos en un formato distinto, con nombres abreviados o inconsistentes.
+- **Estadísticas nulas en partidos antiguos:** Los partidos anteriores al año 2000 no incluyen información estadística (goles, tiros, corners, etc.).
+- **Partido cancelado:** Un partido registrado en la base tiene todos sus campos estadísticos nulos porque fue cancelado.
+- **Temporada nula:** La championship no tiene árbitros registrados en la temporada 2012/13
+
 
 ## Limpieza de Datos
+Correr "limpieza.sql" para limpiar lo siguiente que hicimos:
 
-- **Descripción:** Hicimos una limpieza inicial a los datos, la query de SQL de esta limpieza se encuentra en el repositorio bajo el nombre "limpieza.sql"
-- **Objetivo:** Permitir que los datos sean legibles y manipulables dentro de la base sin perdidas de información.
-- **Cambios Realizados:** Para esta limpieza inicial se identificaron casos de equipos y arbitros cuyo nombre causaba problemas, editamos los datos de forma de que la información quede estandarizada.
-- **Disclaimer:** Esta Limpieza inicial tiene cómo objetivo dejar la base lista para trabajar, para ciertos usos de la base puede requerir una limpieza especifica para la funcionalidad requerida.
+- **Unificación de tablas:** Se unieron las tablas `partido` y `partido2` en una sola tabla consolidada para aplicar limpieza de forma uniforme.
+- **Unificación de nombres de equipos:** Se estandarizaron nombres distintos que representaban al mismo equipo, por ejemplo, "Manchester United" → "Man United".
+- **Filtrado de temporadas antiguas:** Se eliminaron todos los partidos anteriores a la temporada **2002/03**, ya que no contenían información estadística confiable.
+- **Eliminación de temporada específica:** Se eliminó la temporada **2012/13** de la **segunda división** (`league = 'English Second'`), ya que no tiene información suficiente para el análisis principal.
+- **Normalización de árbitros:** Se transformaron los nombres de árbitros al formato `'N Apellido'` en lugar de `'Nombre Apellido'`, por ejemplo: `'Darren England'` → `'D England'`.
+- ✂**Limpieza de espacios:** Se eliminaron espacios en blanco al inicio o fin de los nombres de árbitros.
+- **Eliminación de partido cancelado:** Se borró el registro de un partido que no fue disputado y contenía todos los valores nulos.
+- **Restricciones de integridad:** Se aplicó `SET NOT NULL` a todas las columnas de la tabla `partido`, dado que ya se había limpiado toda la información incompleta.
 
 ## Normalizacion
 ### Base de Datos de Partidos de Fútbol – Esquema Normalizado (5 Tablas)
