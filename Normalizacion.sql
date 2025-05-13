@@ -1,7 +1,3 @@
-/* Juntar las dos tablas de partidos */
-INSERT INTO partido
-SELECT * FROM partido2;
-
 /* partido.id */
 ALTER TABLE partido ADD COLUMN id BIGSERIAL NOT NULL PRIMARY KEY;
 
