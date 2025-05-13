@@ -1,3 +1,6 @@
+INSERT INTO partido
+SELECT * FROM partido2;
+
 -- ipswich
 update partido set home_team = 'Ipswich' where home_team = 'Ipswich Town';
 update partido set away_team = 'Ipswich' where away_team = 'Ipswich Town';
