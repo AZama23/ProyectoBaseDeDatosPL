@@ -155,7 +155,7 @@ Correr "limpieza.sql" para limpiar lo siguiente que hicimos:
 - **Filtrado de temporadas antiguas:** Se eliminaron todos los partidos anteriores a la temporada **2002/03**, ya que no contenían información estadística confiable.
 - **Eliminación de temporada específica:** Se eliminó la temporada **2012/13** de la **segunda división** (`league = 'English Second'`), ya que no tiene información suficiente para el análisis principal.
 - **Normalización de árbitros:** Se transformaron los nombres de árbitros al formato `'N Apellido'` en lugar de `'Nombre Apellido'`, por ejemplo: `'Darren England'` → `'D England'`.
-- ✂**Limpieza de espacios:** Se eliminaron espacios en blanco al inicio o fin de los nombres de árbitros.
+- **Limpieza de espacios:** Se eliminaron espacios en blanco al inicio o fin de los nombres de árbitros.
 - **Eliminación de partido cancelado:** Se borró el registro de un partido que no fue disputado y contenía todos los valores nulos.
 - **Restricciones de integridad:** Se aplicó `SET NOT NULL` a todas las columnas de la tabla `partido`, dado que ya se había limpiado toda la información incompleta.
 
