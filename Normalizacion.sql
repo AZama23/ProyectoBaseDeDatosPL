@@ -2,7 +2,6 @@
 ALTER TABLE partido ADD COLUMN id BIGSERIAL NOT NULL PRIMARY KEY;
 
 /* poblar equipo */
-DROP TABLE IF EXISTS equipo;
 CREATE TABLE equipo(
 	id BIGSERIAL PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL
@@ -34,7 +33,6 @@ SET away_team_id = (
 ALTER TABLE partido ALTER COLUMN away_team_id SET NOT NULL;
 
 /* TABLA ARBITRO y arbitro_id*/
-DROP TABLE arbitro;
 CREATE TABLE arbitro(
 	id BIGSERIAL PRIMARY KEY,
 	nombre VARCHAR(50) NOT NULL
