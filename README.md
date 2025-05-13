@@ -277,6 +277,14 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 - **Resultados:** ![download](https://github.com/user-attachments/assets/e18f5c40-8a9d-40ce-808a-4aab16716cf7)
 - **Analisis:** Aqui podemos explicar muchos resultados de casos anteriores, por ejemplo, vemos que el mayor favorecido ha sido el Manchester United, explicando cómo a pesar de no tener tanta ventaja en puntos totales históricos, tiene 5 titulos más que el segundo lugar.
 
+## Análisis de datos: caso 5
+- **Descripción:** Se calcula el promedio de tarjetas amarillas recibidas por cada equipo, separando su comportamiento como local y como visitante. El análisis permite comparar si los equipos son más o menos sancionados según su condición de juego.
+- **Objetivo:** Identificar si existen equipos con un estilo de juego más agresivo o que reciben más sanciones dependiendo de si juegan en casa o fuera. También se pueden observar posibles desequilibrios arbitrales o estrategias defensivas intensas.
+- **Consulta SQL:**
+	SELECT home_team, away_team, home_yellow, away_yellow
+	FROM partido2;
+- **Resultados:**![image](https://github.com/user-attachments/assets/39e3ad02-8637-49e7-912e-2ee6fed76511)
+- **Análisis:** Equipos como Portsmouth, Sunderland y MK Dons son los que más tarjetas amarillas acumulan en total (local + visitante), lo que podría reflejar un estilo de juego físico o de alta presión. Crewe, Colchester y Doncaster son los equipos más disciplinados en promedio, con menos de 1 tarjeta amarilla por partido en ambos contextos. Algunos equipos presentan diferencias notables entre su comportamiento como local y visitante, como Scunthorpe o Peterboro, lo cual puede estar relacionado con factores como el entorno, el árbitro o la estrategia empleada. Pero en general, todos los equipos tienen tarjetas amarillas cuando zon visitantes, esto podría representar algún sesgo en el campo propio ya sea por la afición, el arbitro o el juego más agresivo. 
 
 
 
