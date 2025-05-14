@@ -261,7 +261,7 @@ ERD:
 
 - **Descripción:** Se calcularon los **siete equipos con más puntos acumulados** y **mejor diferencia de goles** a lo largo de 23 temporadas de la Premier League, utilizando los datos disponibles desde el primer partido registrado en nuestra base de datos.
 - **Objetivo:** El objetivo fue identificar si estos equipos, medidos por rendimiento sostenido, coinciden con los **equipos que realmente ganaron la liga** en ese periodo.  La comparación se realizó con los campeones oficiales: **Liverpool, Manchester City, Manchester United, Chelsea, Arsenal y Leicester City**, contrastando el rendimiento estadístico con los resultados históricos.
-- **Consulta SQL:** La consulta se encuentra en el documento Caso 1.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
+- **Consulta SQL:** La consulta se encuentra en el documento Analisis.sql en este repositorio. Se crearon tablas para registrar los puntos y la diferencia de goles obtenidos por cada equipo en cada partido, y posteriormente se ejecutó una consulta para obtener los siete equipos con la mayor cantidad de puntos y diferencia de goles acumulada.
 - **Resultados:** ![output (1)](https://github.com/user-attachments/assets/b7e1b808-487d-49b3-ba82-668474a4488d)
 
 - **Por títulos**, los siete equipos que líderan son:
@@ -277,7 +277,7 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 
 - **Descripción:** Se calcularon **ratings ofensivos y defensivos** por equipo utilizando datos cómo tiros, tiros a puerta y corners.
 - **Objetivo:** El objetivo fue ver si aquellos equipos que esperarías sean quienes mejor juegan son los que mejor atacan y los que mejor defienden, es decir, si **los datos respaldan lo que el ojo ve.**
-- **Consulta SQL:** La consulta se encuentra en el documento "analisis casos 2 y 4", en este se define un indice dónde se le asigna diferentes pesos a diferentes acciones y se calcula un valor de que tan bien defiende y ataca un equipo.
+- **Consulta SQL:** La consulta se encuentra en el documento Analisis.sql, en este se define un indice dónde se le asigna diferentes pesos a diferentes acciones y se calcula un valor de que tan bien defiende y ataca un equipo.
 - **Resultados:** ![download](https://github.com/user-attachments/assets/57d8d1b6-d79d-452c-baf3-38f628fef1a4)
 - **Analisis:** Aunque en general, los equipos están bastante parejos, encontrandose la gran mayoría en la misma área de la gráfica, si destacan algunos de los equipos que en el caso anterior vimos que se diferencian del resto, por lo tanto, podemos determinar que efectivamente **aquellos equipos que en percepción mejor juegan, se observan igualmente con datos entre los mejores**.
 
@@ -285,7 +285,7 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 
 - **Descripción:** Creamos tablas dónde se obtiene el **promedio de puntos por partido de local y de visitante**, además de la diferencia de estas. Separamos estos datos entre 2 bloques, equipos de ciudades grandes de Inglaterra (Londres, Manchester y Liverpool) y el resto de equipos **actualmente en la primera división iglesa**.
 - **Objetivo:** Analizar si hay alguna diferencia entre ser Local en una gran ciudad y no serlo, para ver si se puede **explicar porqué 11 de 20 equipos de la competición se dividen en solo 3 ciudades**.
-- **Consulta SQL:** La primer consulta se encuentra en el documento **Caso3Ciudad.sql** en este repositorio, este incluye la consulta de los 11 equipos en grandes ciudades de londres. La segunda consulta se encuentra en el documento **Caso3NoCiudad.sql** en este repositorio, este incluye la consulta del resto de equipos.
+- **Consulta SQL:** Las consultas se encuentran en el archivo Analisis.sql, en estas consultas lo que se hace es obtener los datos tanto de local cómo de visitante de cierto grupo de equipos y regresa una tabla que incluye los nombres de los equipos y sus respectivos puntos en casa, de visita y la diferencia.
 - **Resultados:** ![output (3)](https://github.com/user-attachments/assets/23c5d8d7-4fde-454e-bf39-6c063e70dbd7) ![final_visualizacion_puntos_tabla](https://github.com/user-attachments/assets/c607090c-597e-4386-8308-c8ed7f7367cf)
 - **Analisis:** Se observa una **mejor diferencia de puntos y promedio de local en los equipos de ciudad respecto a el resto de la liga**, pero se debe considerar que los llamados "Big Six" se encuentran en este grupo, por lo cual es posible que tengan mejores resultados por jugar en una ciudad grande o simplemente porque son mejores, por lo cual, **se encontró evidencia de que aquellos equipos que juegan en estas ciudades si obtienen mejores resultados en general**, más **no estamos seguros si la zona en la que juegan es el causante de este resultado**.
 - **Casos anomalos:** Algunos resultados que resaltan son el del **Ipswich**, pues es el único con diferencia negativa, consideramos que esto se debe a que solo llevan 1 temporada en premier, por lo que el resultado es algo impreciso. En cuanto al **Newcastle**, aunque no se encuentra en una ciudad, se encuentra muy alejado al norte del país y cuenta con el estadio más grande fuera de los equipos de ciudades grandes, por lo cual hace sentido que sus numeros sean más similares a estos equipos que con los de su grupo. Finalmente, el **Crystal Palace**, está en un caso similar pero invertdo al newcastle, pues al contar con un estadio pequeño y alejado de los centros turisticos de londres, se puede explicar que sus numeros sean más similares a los del resto de equipos que con los equipos de ciudad grande. 
@@ -294,16 +294,14 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 
 - **Descripción:** Se calcula la **diferencia entre las victorias REALES obtenidas y las victorias ESPERADAS** calculadas mediante el uso de datos como tiros, tiros a puerta y corners.
 - **Objetivo:** El objetivo es revelar si hay equipos que **obtenido resultados que superan lo que deberían haber conseguido**.
-- **Consulta SQL:** La consulta se encuentra en el documento "analisis casos 2 y 4", en este se define un indice dónde se le calcula mediante comparación entre local y visitante quien "jugo mejor".
+- **Consulta SQL:** La consulta se encuentra en el documento Analisis.sql, en este se define un indice dónde se le calcula mediante comparación entre local y visitante quien "jugo mejor".
 - **Resultados:** ![download](https://github.com/user-attachments/assets/e18f5c40-8a9d-40ce-808a-4aab16716cf7)
 - **Analisis:** Aqui podemos explicar muchos resultados de casos anteriores, por ejemplo, vemos que el mayor favorecido ha sido el Manchester United, explicando cómo a pesar de no tener tanta ventaja en puntos totales históricos, tiene 5 titulos más que el segundo lugar.
 
 ## Análisis de datos: caso 5
 - **Descripción:** Se calcula el promedio de tarjetas amarillas recibidas por cada equipo, separando su comportamiento como local y como visitante. El análisis permite comparar si los equipos son más o menos sancionados según su condición de juego.
 - **Objetivo:** Identificar si existen equipos con un estilo de juego más agresivo o que reciben más sanciones dependiendo de si juegan en casa o fuera. También se pueden observar posibles desequilibrios arbitrales o estrategias defensivas intensas.
-- **Consulta SQL:**
-	SELECT home_team, away_team, home_yellow, away_yellow
-	FROM partido2;
+- **Consulta SQL:** La consulta se encuentra en el archivo Analisis.sql, en esta se define el promedio de amarillas del local y visitante para compararlas posteriormente.
 - **Resultados:**![image](https://github.com/user-attachments/assets/6734b8c5-d79b-45f2-9008-1e8bfc9e7d59)
 - **Análisis:** Equipos como Portsmouth, Sunderland y MK Dons son los que más tarjetas amarillas acumulan en total (local + visitante), lo que podría reflejar un estilo de juego físico o de alta presión. Crewe, Colchester y Doncaster son los equipos más disciplinados en promedio, con menos de 1 tarjeta amarilla por partido en ambos contextos. Algunos equipos presentan diferencias notables entre su comportamiento como local y visitante, como Scunthorpe o Peterboro, lo cual puede estar relacionado con factores como el entorno, el árbitro o la estrategia empleada. Pero en general, todos los equipos tienen tarjetas amarillas cuando zon visitantes, esto podría representar algún sesgo en el campo propio ya sea por la afición, el arbitro o el juego más agresivo. 
 
