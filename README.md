@@ -15,12 +15,6 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
 - Enlace a la base de datos: [Kaggle Dataset](https://www.kaggle.com/datasets/panaaaaa/english-premier-league-and-championship-full-dataset)
 - Última actualización: hace 8 días, con datos hasta el 16 de enero de este año.
   
-## Contacto
-- **Joseph Buchdahl**
-  - X: [@12Xpert](https://x.com/12Xpert)
-  - Web: [12xpert.co.uk](http://12xpert.co.uk/)
-
-
 ## Estructura de los Datos
 - **Número de registros:** 23504 partidos.
 - **Número de atributos:** 25 columnas.
@@ -54,7 +48,7 @@ El set de datos elegido incluye los registros de todos los partidos jugados en l
 Se definieron 5 objetivos principales:
 
 Caso 1. **Expandir la muestra**  
-- Comparar los siete equipos de Premier League (primera división) con mayor cantidad de puntos acumulados y diferencia de goles acumulada a partir del primer dato que se tiene registrado en nuestra base (ya limpia y normalizada) con los equipos que ganaron la liga en ese lapso.
+- Comparar los siete equipos de Premier League (primera división) con mayor cantidad de puntos acumulados y diferencia de goles acumulada a partir del primer dato que se tiene registrado en nuestra base con los equipos que ganaron la liga en ese lapso.
 
 Caso 2. **Ratings**
 - Considerar si los equipos que mejor atacan y defienden son los que mejores resultados obtienen. Esto con el objetivo de ver si *los datos respaldan lo que el ojo ve*.
