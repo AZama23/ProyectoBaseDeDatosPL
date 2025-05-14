@@ -130,7 +130,7 @@ En computadoras Windows, se le debe invertir las \ de la ruta por / y agregar co
 
 ### Exploración inicial
 
-Realizamos diversas consultas para entender cómo se estructuraba nuestra base de datos, identificando valores nulos, formatos inconsistentes y registros erróneos. Estas consultas están documentadas en el archivo `AnalisisPreliminar.sql`.
+Para entender cómo se estructuraba nuestra base de datos, realizamos diferentes consultas y navegamos a través de los datos, identificando valores nulos, formatos inconsistentes y registros erróneos. Estas consultas están documentadas en el archivo `AnalisisPreliminar.sql`.
 
 ### Hallazgos
 
