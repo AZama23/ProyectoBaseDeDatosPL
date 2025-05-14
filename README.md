@@ -310,7 +310,7 @@ La conclusión es que el **rendimiento sostenido a lo largo del tiempo no siempr
 - **Consulta SQL:**
 	SELECT home_team, away_team, home_yellow, away_yellow
 	FROM partido2;
-- **Resultados:**![image](https://github.com/user-attachments/assets/39e3ad02-8637-49e7-912e-2ee6fed76511)
+- **Resultados:**![image](![image](https://github.com/user-attachments/assets/6734b8c5-d79b-45f2-9008-1e8bfc9e7d59))
 - **Análisis:** Equipos como Portsmouth, Sunderland y MK Dons son los que más tarjetas amarillas acumulan en total (local + visitante), lo que podría reflejar un estilo de juego físico o de alta presión. Crewe, Colchester y Doncaster son los equipos más disciplinados en promedio, con menos de 1 tarjeta amarilla por partido en ambos contextos. Algunos equipos presentan diferencias notables entre su comportamiento como local y visitante, como Scunthorpe o Peterboro, lo cual puede estar relacionado con factores como el entorno, el árbitro o la estrategia empleada. Pero en general, todos los equipos tienen tarjetas amarillas cuando zon visitantes, esto podría representar algún sesgo en el campo propio ya sea por la afición, el arbitro o el juego más agresivo. 
 
 
